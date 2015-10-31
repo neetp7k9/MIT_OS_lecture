@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAXARGS	shell.c	12;"	d	file:
+argv	shell.c	/^  char *argv[MAXARGS];   \/\/ arguments to the command to be exec-ed$/;"	m	struct:execcmd	file:
+cmd	shell.c	/^  struct cmd *cmd;   \/\/ the command to be run (e.g., an execcmd)$/;"	m	struct:redircmd	typeref:struct:redircmd::cmd	file:
+cmd	shell.c	/^struct cmd {$/;"	s	file:
+execcmd	shell.c	/^execcmd(void)$/;"	f
+execcmd	shell.c	/^struct execcmd {$/;"	s	file:
+fd	shell.c	/^  int fd;            \/\/ the file descriptor number to use for the file$/;"	m	struct:redircmd	file:
+file	shell.c	/^  char *file;        \/\/ the input\/output file$/;"	m	struct:redircmd	file:
+fork1	shell.c	/^fork1(void)$/;"	f
+getcmd	shell.c	/^getcmd(char *buf, int nbuf)$/;"	f
+gettoken	shell.c	/^gettoken(char **ps, char *es, char **q, char **eq)$/;"	f
+left	shell.c	/^  struct cmd *left;  \/\/ left side of pipe$/;"	m	struct:pipecmd	typeref:struct:pipecmd::cmd	file:
+main	shell.c	/^main(void)$/;"	f
+mkcopy	shell.c	/^*mkcopy(char *s, char *es)$/;"	f
+mode	shell.c	/^  int mode;          \/\/ the mode to open the file with$/;"	m	struct:redircmd	file:
+parsecmd	shell.c	/^parsecmd(char *s)$/;"	f
+parseexec	shell.c	/^parseexec(char **ps, char *es)$/;"	f
+parseline	shell.c	/^parseline(char **ps, char *es)$/;"	f
+parsepipe	shell.c	/^parsepipe(char **ps, char *es)$/;"	f
+parseredirs	shell.c	/^parseredirs(struct cmd *cmd, char **ps, char *es)$/;"	f
+peek	shell.c	/^peek(char **ps, char *es, char *toks)$/;"	f
+pipecmd	shell.c	/^pipecmd(struct cmd *left, struct cmd *right)$/;"	f
+pipecmd	shell.c	/^struct pipecmd {$/;"	s	file:
+redircmd	shell.c	/^redircmd(struct cmd *subcmd, char *file, int type)$/;"	f
+redircmd	shell.c	/^struct redircmd {$/;"	s	file:
+right	shell.c	/^  struct cmd *right; \/\/ right side of pipe$/;"	m	struct:pipecmd	typeref:struct:pipecmd::cmd	file:
+runcmd	shell.c	/^runcmd(struct cmd *cmd)$/;"	f
+symbols	shell.c	/^char symbols[] = "<|>";$/;"	v
+type	shell.c	/^  int type;              \/\/ ' '$/;"	m	struct:execcmd	file:
+type	shell.c	/^  int type;          \/\/  ' ' (exec), | (pipe), '<' or '>' for redirection$/;"	m	struct:cmd	file:
+type	shell.c	/^  int type;          \/\/ < or > $/;"	m	struct:redircmd	file:
+type	shell.c	/^  int type;          \/\/ |$/;"	m	struct:pipecmd	file:
+whitespace	shell.c	/^char whitespace[] = " \\t\\r\\n\\v";$/;"	v
